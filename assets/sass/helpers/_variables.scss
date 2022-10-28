@@ -1,0 +1,24 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Hind:400,600|Montserrat:600,700');
+
+// fonts
+$base-font-size: 15;
+
+$base-font: 'Hind', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+
+
+// color
+$dark-blue: #051829;
+$yellow: #fdc900;
+$dark-gray: #2a2a2a;
+$light-gray: #6a6a6a;
+$white: #fff;
+$black: #000;
+
+$theme-primary-color: $dark-blue;
+$theme-secondary-color: $yellow;
+$text-color: $light-gray;
+$heading-color: $dark-blue;

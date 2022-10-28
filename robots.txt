@@ -1,0 +1,10 @@
+# Regla 1
+User-agent: Googlebot
+Disallow: /admin/*
+Disallow: /backup/*
+
+# Regla 2
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sitio.com.ar/sitemap.php

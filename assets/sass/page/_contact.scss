@@ -1,0 +1,144 @@
+/*--------------------------------------------------------------
+#6.0	contact-pg-section
+--------------------------------------------------------------*/
+.contact-pg-section {
+
+	.contact-info ul li {
+		padding-left: 45px;
+		position: relative;
+		list-style-type: none;
+	}
+
+	.contact-info ul > li + li {
+		margin-top: 50px;
+
+		@include media-query(991px) {
+			margin-top: 25px;
+		}
+	}
+
+	.contact-info .icon {
+		background-color: $theme-secondary-color;
+		width: 35px;
+		height: 35px;
+		line-height: 38px;
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		color: $white;
+		text-align: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 50%;
+	}
+
+	.contact-info p {
+		font-size: 17px;
+		font-size: calc-rem-value(17);
+		font-weight: bold;
+		line-height: 1.4em;
+		color: $theme-primary-color;
+		margin: 0;
+
+		@include media-query(1199px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+	}
+
+	.contact-info p span {
+		display: block;
+		color: #969fab;
+	}
+
+	.location-map {
+		background-color: red;
+		height: 357px;
+		border-radius: 10px;
+
+		@include media-query(991px) {
+			margin-top: 40px;
+		}
+	}
+
+
+	/*** contact form ***/
+	.contact-form {
+		margin-top: 70px;
+
+		> div {
+			margin-bottom: 40px;
+
+			@include media-query(991px) {
+				margin-bottom: 20px;
+			}
+		}
+
+		label {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			color: $theme-primary-color;
+			font-weight: 600;
+
+			@include media-query(1199px) {
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+		}
+
+		input,
+		textarea {
+			height: 45px;
+			border: 2px solid #d1d7e0;
+			border-radius: 10px;
+
+			@include media-query(991px) {
+				height: 35px;
+				border: 1px solid #d1d7e0;
+				border-radius: 5px;
+			}
+		}
+
+		textarea {
+			height: 230px;
+
+			@include media-query(991px) {
+				height: 150px;
+			}
+		}
+
+		.submit-btn {
+			margin-bottom: 0;
+		}
+
+		.submit-btn button {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			padding: 0;
+			font-weight: 600;
+
+			@include media-query(1199px) {
+				height: 45px;
+				line-height: 45px;
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+
+			@include media-query(991px) {
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+	}
+
+	#contact-form-s2 #loader {
+		i {
+			color: $theme-primary-color;
+		}
+	}
+
+
+}

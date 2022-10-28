@@ -1,0 +1,14 @@
+{
+    "require": {
+        "jasongrimes/paginator": "~1.0",
+        "phpmailer/phpmailer": "^6.1",
+        "mercadopago/sdk": "0.5.3",
+        "mercadopago/dx-php": "*",
+        "todopago/php-sdk": "^1.10",
+        "phpoffice/phpspreadsheet": "^1.16",
+        "dompdf/dompdf": "dev-master",
+        "vlucas/phpdotenv": "^5.3",
+        "sabberworm/php-css-parser": "^8.3",
+        "verot/class.upload.php": "*"
+    }
+}

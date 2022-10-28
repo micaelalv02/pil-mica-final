@@ -1,0 +1,60 @@
+.dots-s1 {
+    .owl-controls {
+        margin-top: 0;
+    }
+    
+    .owl-dots {
+        height: 15px;
+    }
+    
+    .owl-dots .owl-dot span {
+        background: #bfbfbf;
+        width: 8px;
+        height: 8px;
+        margin: 0 7px;
+        @include transition-time(0.3s);
+    }
+    
+    .owl-dots .owl-dot.active span, 
+    .owl-dots .owl-dot:hover span {
+        background-color: $theme-secondary-color;
+    }
+    
+    .owl-dots .owl-dot.active span {
+        width: 9px;
+        height: 9px;
+    }
+}
+
+.slider-arrow-s1 {
+    .owl-controls {
+        margin-top: 0;
+    }
+
+    .owl-controls .owl-nav .owl-prev,
+    .owl-controls .owl-nav .owl-next {
+        background-color: $theme-secondary-color;
+        width: 34px;
+        height: 34px;
+        line-height: 37px;
+        font-size: 18px;
+        font-size: calc-rem-value(18);
+        color: $theme-primary-color;
+        padding: 0;
+        @include transition-time(0.2s);
+
+        &:hover {
+            background-color: darken($theme-secondary-color, 5%);
+            color: $theme-primary-color;
+        }
+
+        @include media-query(991px) {
+            width: 30px;
+            height: 30px;
+            line-height: 33px;
+            font-size: 16px;
+            font-size: calc-rem-value(16);
+        }
+    }
+}
+

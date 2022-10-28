@@ -1,0 +1,93 @@
+/******************************
+	#blog grids
+******************************/
+.page-title {
+	@include background-style("../images/page-title.jpg", center center, cover, no-repeat, local);
+	height: 260px;
+	position: relative;
+	width: 100%;
+
+
+	@include media-query(767px) {
+		height: 220px;
+	}
+
+	&:before {
+		content: "";
+		@include overlay(transparentize($black, 0.7));
+	}
+
+	.container {
+		height: 100%;
+		display: table;
+
+		> .row {
+			vertical-align: middle;
+			display: table-cell;
+		}
+	}
+
+	h2,
+	ol {
+		color: $white;
+	}
+
+	h2 {
+		font-size: 48px;
+		font-size: calc-rem-value(48);
+		font-weight: 800;
+		margin: 1em 0 0.23em;
+
+		@include media-query(1199px) {
+			font-size: 42px;
+			font-size: calc-rem-value(42);
+		}
+
+		@include media-query(991px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		@include media-query(767px) {
+			font-size: 28px;
+			font-size: calc-rem-value(28);
+			font-weight: bold;
+		}
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		padding: 0;
+
+		@include media-query(767px) {
+			text-align: center;
+		}
+	}
+
+	.breadcrumb li {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+		color: $theme-secondary-color;
+		margin-right: 5px;
+
+		@include media-query(991px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+	}
+
+	.breadcrumb li a {
+		color: $white;
+	}
+
+	.breadcrumb li a:hover {
+		color: $theme-secondary-color;
+	}
+
+	.breadcrumb > li + li:before {
+		font-family: "FontAwesome";
+		content: "\f105";
+		color: $white;
+		margin-right: 5px;
+	}
+}

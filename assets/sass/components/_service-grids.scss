@@ -1,0 +1,103 @@
+/*************************************
+    = service grids
+**************************************/
+.services-grids {
+    overflow: hidden;
+    
+    .inner {
+        min-height: 254px;
+        position: relative;
+        overflow: hidden;
+        
+        @include media-query(1199px) {
+           min-height: 218px;
+        }
+    }
+    
+    .details {
+        width: 100%;
+        height: 100%;
+        padding: 60px 50px;
+        position: absolute;
+        left: 0;
+        top: 57%;
+        @include transition-time(0.5s);
+        
+        @include media-query(1199px) {
+           padding: 50px 30px;
+        }
+    }
+    
+    .info {
+        position: relative;
+    }
+    
+    .details h3 {
+        font-size: 18px;
+        font-size: calc-rem-value(18);
+        color: $white;
+        font-weight: 600;
+        margin: 0 0 1.2em;
+        
+        @include media-query(1199px) {
+            font-size: 17px;
+            font-size: calc-rem-value(17);
+            margin: 0 0 1.2em;
+        }
+        
+        @include media-query(767px) {
+            font-size: 15px;
+            font-size: calc-rem-value(15);
+            margin: 0 0 1.2em;
+        }
+        
+        i {
+            background: $theme-secondary-color;
+            color: $theme-primary-color;
+            padding: 7px 10px;
+            @include rounded-border(3px);
+            position: relative;
+            left: -5px;
+            
+            @include media-query(1199px) {
+                 padding: 5px 8px;
+            }
+        }
+    }
+    
+    .details p {
+        font-size: 14px;
+        font-size: calc-rem-value(14);
+        color: $white;
+        margin: 0 0 1.79em;
+    }
+    
+    .details .more {
+        font-weight: 600;
+        color: $heading-color;
+        text-transform: capitalize;
+    }
+    
+    .grid:hover .details {
+        @include overlay(transparentize($theme-secondary-color, 0.1));
+        top: 0;
+    }
+    
+    .grid:hover .details h3 {
+        color: $heading-color;
+        margin: 0 0 0.59em;
+        
+        i {
+            background: transparent;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

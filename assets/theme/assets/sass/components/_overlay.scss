@@ -1,0 +1,90 @@
+/*-------------------------------------------------
+    [ ## Overlay Element ]
+*/
+.bg_img {
+  background-size: cover !important;
+  background-position: center !important;
+	background-repeat: no-repeat !important; 
+}
+.bg-fixed {
+	background-attachment: fixed;
+}
+.bg-overlay-base {
+  position: relative;
+}
+.bg-overlay-base:after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(335deg, $bg--base 15%, rgba(25, 25, 25, 0) 100%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bg-overlay-base > div {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-overlay-black {
+  position: relative;
+}
+.bg-overlay-black:after {
+  content: "";
+  position: absolute;
+  background-color: $section--bg;
+  opacity: .8;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bg-overlay-black > div {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-overlay-red {
+  position: relative;
+}
+.bg-overlay-red:after {
+  content: "";
+  position: absolute;
+  background-color: $bg--base;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+}
+.bg-overlay-red > div {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-overlay-white {
+  position: relative;
+}
+.bg-overlay-white:after {
+  content: "";
+  position: absolute;
+  background-color: $white;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bg-overlay-white > div {
+  position: relative;
+  z-index: 2;
+}

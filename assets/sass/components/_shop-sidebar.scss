@@ -1,0 +1,181 @@
+/*** shop sidebar ***/
+.shop-sidebar {
+
+	@include media-query(1199px) {
+		margin-top: 80px;
+	}
+
+	@include media-query(767px) {
+		margin-top: 70px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.widget {
+		margin-bottom: 65px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			margin: 0 0 1.7em;
+			padding-bottom: 0.6em;
+			text-transform: uppercase;
+			position: relative;
+
+			&:before {
+				content: "";
+				background-color: $theme-primary-color;
+				width: 30px;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			@include media-query(991px) {
+				font-size: 18px;
+			}
+		}
+
+		> ul li {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+		> ul li:first-child a {
+			padding-top: 0;
+		}
+
+		> ul li:last-child a {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		> ul li a {
+			display: block;
+			font-weight: bold;
+			color: lighten($black, 20%);
+			padding: 9px 0;
+			border-bottom: 1px solid lighten($black, 90%);
+			position: relative;
+		}
+
+		> ul li a:hover,
+		> ul li a:hover .badge {
+			color: $theme-primary-color;
+		}
+
+		> ul li a i {
+			position: absolute;
+			right: 18px;
+			top: 50%;
+			@include translatingY();
+		}
+
+		> ul li a .badge {
+			color: lighten($black, 20%);
+			background: transparent;
+			position: absolute;
+			right: 7px;
+		}
+
+		> ul li a .badge:before {
+			content: "(";
+			position: absolute;
+			left: 0;
+		}
+
+		> ul li a .badge:after {
+			content: ")";
+			position: absolute;
+			right: 0;
+		}
+	}
+
+	/*** range filtering ***/
+	.filter-price-widget {
+
+		.slider.slider-horizontal {
+			width: 100%;
+
+			.slider-track {
+				background: lighten($black, 85%) !important;
+				height: 2px;
+				margin: 0;
+
+				.slider-selection {
+					background: lighten($black, 25%) !important;
+				}
+			}
+
+			.slider-handle {
+				background: $theme-primary-color;
+				width: 14px;
+				height: 14px;
+				top: 3px ;
+			}
+		}
+		
+		.value {
+			overflow: hidden;
+			margin-top: 17px;
+
+			> div {
+				display: inline-block;
+				float: left;
+			}
+		}
+
+		.price {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			font-weight: bold;
+			color: lighten($black, 60%);
+			line-height: 30px;
+			float: right !important; 
+
+			#min-value,
+			#max-value {
+				color: $black;
+			}
+
+			#max-value {
+				display: inline-block;
+				position: relative;
+				padding-left: 15px;
+
+				&:before {
+					content: "";
+					border-bottom: 1px solid $black;
+					width: 10px;
+					height: 1px;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					@include translatingY();
+				}
+			}
+		}
+
+		.theme-btn {
+			height: 30px;
+			line-height: 30px;
+			font-size: 13px;
+			font-size: calc-rem-value(13);
+			font-weight: bold;
+			padding: 0 17px;
+			text-transform: uppercase;
+			@include rounded-border(15px);
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

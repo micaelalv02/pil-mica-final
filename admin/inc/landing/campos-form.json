@@ -1,0 +1,1 @@
+[{"titulo":"Titulo de formulario 1","submit":"Subscribirse","landing":"bf8c1dae26","cod":"924beca689","idioma":"es","data":{"0":{"campo":"nombre","orden":"0","columnas":"6","type":"text","requerido":true},"1":{"campo":"apellido","orden":"1","columnas":"6","type":"text","requerido":false},"3":{"campo":"email","orden":"2","columnas":"12","type":"text","requerido":true}}}]

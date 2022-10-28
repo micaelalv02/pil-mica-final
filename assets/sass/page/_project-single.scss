@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+#6.0	service-single-section
+--------------------------------------------------------------*/
+.project-single-section {
+
+	.project-single-details {
+		border: 2px solid $theme-secondary-color;
+		padding: 60px 50px;
+		border-radius: 5px;
+
+		@include media-query(1199px) {
+			padding: 40px 30px;
+		}
+
+		@include media-query(991px) {
+			margin-top: 50px;
+		}
+
+		@include media-query(767px) {
+			padding: 30px 25px;
+		}
+	}
+
+	.project-single-details h3 {
+		font-size: 25px;
+		font-size: calc-rem-value(25);
+		margin: 0 0 0.75em;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+	}
+
+	.project-info {
+		list-style-type: none;
+		padding-top: 40px;
+
+		@include media-query(991px) {
+			padding-top: 20px;
+		}
+
+		li {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+
+			span {
+				color: $theme-primary-color;
+				font-weight: 600;
+			}
+		}
+
+		> li + li {
+			margin-top: 13px;
+		}
+
+		i {
+			color: $theme-secondary-color;
+			display: inline-block;
+			padding-right: 5px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.social-links {
+	overflow: hidden;
+	list-style-type: none;
+
+	li {
+		float: left;
+
+		a {
+			display: block;
+			text-align: center;
+		}
+	}
+}

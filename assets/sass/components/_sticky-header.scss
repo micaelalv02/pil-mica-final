@@ -1,0 +1,37 @@
+.sticky-header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: -100%;
+	z-index: 10000;
+	opacity: 0;
+	box-shadow: 0 1px 5px transparentize($black, 0.8);
+	@include transition-time(0.7s);
+}
+
+.sticky-on {
+	opacity: 1;
+	top: 0;
+}
+
+.header-style-3 .sticky-header {
+	background-color: lighten($theme-primary-color, 10%);
+
+	@include widther(992px) {
+		#navbar > ul > li > a:hover {
+			color: $theme-secondary-color;
+		}
+	}
+}
+
+.header-style-4 .sticky-header {
+	background-color: $white;
+}
+
+.header-style-5 .sticky-header {
+	background-color: $theme-secondary-color;
+}
+
+.header-style-5 .sticky-header .container {
+	border-radius: 0;
+}

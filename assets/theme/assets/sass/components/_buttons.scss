@@ -1,0 +1,216 @@
+/*-------------------------------------------------
+    [ ## Buttons ]
+*/
+input[type="button"] {
+	@extend button;
+}
+input[type="reset"] {
+	@extend button;
+}
+input[type="submit"] {
+	@extend button;
+	&:hover {
+		color: $white;
+	}
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	&:focus {
+		outline: none;
+	}	
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+.btn {
+    -webkit-transition: all 0.3s ease 0.02s;
+    transition: all 0.3s ease 0.02s;
+}
+.btn:active,
+.btn:focus {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.125) inset;
+}
+.btn {
+    border: 0px solid;
+    border-radius: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    @media only screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+.btn-rounded{
+    border-radius: 3px;
+}
+.btn-capsule{
+    border-radius: 100px;
+}
+/*-------------------------------------------------
+    [ ## custom btn ]
+*/
+.btn--primary{
+    background-color: #7367f0;
+}
+.btn--secondary {
+    background-color: #868e96;
+}
+.btn--success {
+    background-color: #28c76f;
+}
+.btn--danger {
+    background-color: #ea5455;
+}
+.btn--warning {
+    background-color: #ff9f43;
+}
+.btn--info {
+    background-color: #1e9ff2;
+}
+.btn--dark {
+    background-color: #10163A;
+}
+.badge--primary{
+    background-color: #7367f0;
+}
+.badge--secondary {
+    background-color: #868e96;
+}
+.badge--success {
+    background-color: #28c76f;
+}
+.badge--danger {
+    background-color: #ea5455;
+}
+.badge--warning {
+    background-color: #ff9f43;
+}
+.badge--info {
+    background-color: #1e9ff2;
+}
+.badge--dark {
+    background-color: #10163A;
+}
+.border--primary{
+    border: 1px solid #7367f0;
+}
+.border--secondary {
+    border: 1px solid #868e96;
+}
+.border--success {
+    border: 1px solid #28c76f;
+}
+.border--danger {
+    border: 1px solid #ea5455;
+}
+.border--warning {
+    border: 1px solid #ff9f43;
+}
+.border--info {
+    border: 1px solid #1e9ff2;
+}
+.border--dark {
+    border: 1px solid #10163A;
+}
+.badge{
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 5px 20px 7px 20px;
+    font-size: 11px;
+}
+.btn--base {
+    position: relative;
+    background: $bg--base;
+    border: 1px solid $bg--base;
+    color: $white;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: $white;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+    }
+    &.active{
+        background: transparent;
+        border: 1px solid $bg--base;
+        color: $text--base;
+        &::before{
+            background: $bg--base;
+        }
+        &:hover {
+            color: $white;
+        }
+    }
+    &.subscribe {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        width: 100%;
+        border-radius: 6px;
+
+        &::before {
+            background: $bg--base;
+        }
+
+        &:hover {
+            color: $white;
+            border: 1px solid $bg--base;
+        }
+    }
+    &:focus,
+    &:hover {
+        color: $text--base;
+        &::before{
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+.custom-btn{
+    color: $text--base;
+    font-weight: 600;
+    transition: all 0.3s;
+    &.two{
+        color: #9DBAFE;
+        &:hover{
+            color: #9DBAFE;
+        }
+    }
+    i{
+        font-size: 12px;
+        transition: all 0.3s;
+    }
+    &:hover{
+        color: $text--base;
+        i{
+            padding-left: 5px;
+        }
+    }
+}

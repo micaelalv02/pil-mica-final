@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+#4.0	faq-pg-section
+--------------------------------------------------------------*/
+.faq-pg-section {
+
+	.section-title-s4 p span {
+		display: block;
+		font-weight: 600;
+	}
+
+	.faq-section {
+		@include widther(992px) {
+			border: 1px solid #dee0e1;
+			padding: 70px;
+			border-radius: 5px;
+		}
+	}
+}

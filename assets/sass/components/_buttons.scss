@@ -1,0 +1,75 @@
+.theme-btn {
+	background-color: $theme-secondary-color;
+	font-size: 16px;
+	font-size: calc-rem-value(16);
+	font-weight: 600;
+	color: $theme-primary-color;
+	padding: 5px 28px;
+	border: 2px solid $theme-secondary-color;
+	@include rounded-border(3px);
+
+	&:hover {
+		background-color: darken($theme-primary-color, 5%);
+		color: $white;
+	}
+
+	@include media-query(1199px) {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		padding: 4px 22px;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		padding: 4px 20px;
+	}
+
+	@include media-query(767px) {
+		font-size: 13px;
+	}
+}
+
+.theme-btn-s2 {
+	@extend .theme-btn;
+	background-color: darken($theme-primary-color, 5%);
+	color: $white;
+
+	&:hover {
+		background-color: $theme-secondary-color;
+		color: $theme-primary-color;
+	}
+}
+
+.theme-btn-s3 {
+	@extend .theme-btn;
+
+	&:hover {
+		border-color: $theme-primary-color;
+		color: $theme-secondary-color;
+	}
+}
+
+.theme-btn-s4 {
+	@extend .theme-btn;
+	background-color: $theme-primary-color;
+	border-color: $theme-primary-color;
+	color: $theme-secondary-color;
+
+	&:hover {
+		background-color: $theme-secondary-color;
+		border-color: $theme-secondary-color;
+		color: $theme-primary-color;
+	}
+}
+
+.theme-btn-s5 {
+	@extend .theme-btn;
+	background-color: transparent;
+	border: 2px solid $theme-secondary-color;
+	color: $white;
+
+	&:hover {
+		background-color: $theme-secondary-color;
+	}
+}

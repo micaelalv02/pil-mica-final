@@ -1,0 +1,204 @@
+/*************************************
+    = team grids
+**************************************/
+.team-grids {
+	.team-grid {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.member-pic-social {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.social {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include transition-time(0.6s);
+	}
+
+	.social-links {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include center-by-translating();
+		z-index: 11;
+		opacity: 0;
+	}
+
+	.member-pic-social:hover .social-links {
+		opacity: 1;
+	}
+
+	.social-links > li + li {
+		margin-left: 20px;
+	}
+
+	.social-links li a {
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		color: $white;
+
+		@include media-query(1199px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.social-links li a:hover {
+		color: $theme-primary-color;
+	}
+
+	.member-info {
+		text-align: center;
+		padding-top: 25px;
+
+		h3 {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+			margin: 0 0 3px;
+
+			@include media-query(1199px) {
+				font-size: 18px;
+				font-size: calc-rem-value(18);
+			}
+
+			@include media-query(991px) {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		p {
+			@include media-query(991px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}			
+		}
+	}
+
+
+	.owl-controls .owl-nav {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 59%;
+		z-index: 10;
+
+		@include media-query(1199px) {
+			display: none;
+		}
+	}
+
+	.owl-controls .owl-dots {
+		position: relative;
+		top: 80px;
+		z-index: 10;
+
+		@include media-query(1199px) {
+			top: 0;
+		}
+	}
+
+	.owl-controls .owl-nav .owl-prev,
+	.owl-controls .owl-nav .owl-next {
+		background: transparent;
+		font-size: 24px;
+		font-size: calc-rem-value(24);
+		color: $theme-primary-color;
+		padding: 0;
+		position: absolute;
+	}
+
+	.owl-controls .owl-nav .owl-prev:hover,
+	.owl-controls .owl-nav .owl-next:hover {
+		background: transparent;
+		color: $theme-secondary-color;
+	}
+
+	.owl-controls .owl-nav .owl-prev {
+		left: -65px;
+	}
+
+	.owl-controls .owl-nav .owl-next {
+		right: -65px;
+	}
+
+	.owl-controls .owl-dots .active span,
+	.owl-controls .owl-dots .owl-dot:hover span {
+		background: $theme-secondary-color;
+	}
+}
+
+.square-hover-effect {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+
+	.hover-1,
+	.hover-2,
+	.hover-3,
+	.hover-4 {
+		background: transparentize($theme-secondary-color, 0.1);
+		width: 50%;
+		height: 50%;
+		position: absolute;
+		@include transition-time(0.5s);
+		opacity: 0;
+	}
+
+	.hover-1 {
+		left: 0;
+		top: 0;
+	}
+
+	.hover-2 {
+		left: 50%;
+		top: 0;
+	}
+
+	.hover-3 {
+		left: 50%;
+		top: 50%;
+	}
+
+	.hover-4 {
+		left: 0;
+		top: 50%;
+	}
+}
+
+.square-hover-effect:hover .hover-1,
+.square-hover-effect-parent:hover .hover-1 {
+	left: 50%;
+	top: 0;
+	opacity: 1;
+}
+
+.square-hover-effect:hover .hover-2,
+.square-hover-effect-parent:hover .hover-2 {
+	left: 50%;
+	top: 50%;
+	opacity: 1;
+}
+
+.square-hover-effect:hover .hover-3,
+.square-hover-effect-parent:hover .hover-3 {
+	left: 0%;
+	top: 50%;
+	opacity: 1;
+}
+
+.square-hover-effect:hover .hover-4,
+.square-hover-effect-parent:hover .hover-4 {
+	left: 0%;
+	top: 0%;
+	opacity: 1;
+}

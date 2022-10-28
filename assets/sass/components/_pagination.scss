@@ -1,0 +1,46 @@
+/**** pagination ****/
+.pagination-wrapper {
+	text-align: center;
+
+	.pg-pagination {
+		display: inline-block;
+		overflow: hidden;
+		list-style-type: none;
+
+		li {
+			float: left;
+			margin-right: 10px;
+
+			@include media-query(767px) {
+				margin-right: 5px;
+			}
+		}
+
+		li:last-child {
+			margin-right: 0;
+		}
+
+		li a {
+			font-family: $heading-font;
+			background-color: $heading-color;
+			display: block;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			color: $white;
+			font-weight: 500;
+
+			@include media-query(767px) {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+
+		.active a,
+		li a:hover {
+			background-color: $theme-secondary-color;
+			color: $heading-color;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+#7.0	blog-grid section
+--------------------------------------------------------------*/
+.blog-grid-section {
+	.news-grids {
+		overflow: hidden;
+		padding-top: 0;
+	}
+
+	.news-grids .grid {
+		margin-bottom: 30px;
+	}
+
+	.news-grids > .grid:last-child {
+		margin-top: 0;
+	}
+
+	.pagination-wrapper {
+		margin-top: 50px;
+
+		@include media-query(991px) {
+			margin-top: 30px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 20px;
+		}
+	}
+}

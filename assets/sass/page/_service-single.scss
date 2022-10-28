@@ -1,0 +1,128 @@
+/*--------------------------------------------------------------
+#5.0	service-single-section
+--------------------------------------------------------------*/
+.service-single-content {
+	.title {
+		position: relative;
+		margin-top: 52px;
+
+		@include widther(1200px) {
+			padding-right: 340px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 40px;
+		}
+	}
+
+	.title h3 {
+		font-size: 25px;
+		font-size: calc-rem-value(25);
+		margin: 0 0 2em;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+
+		@include media-query(767px) {
+			font-size: 17px;
+			font-size: calc-rem-value(17);
+		}
+	}
+
+	.download {
+		position: absolute;
+	    right: 0;
+	    top: 0;
+
+	    @include media-query(1199px) {
+	    	position: static;
+	    	margin-bottom: 40px;
+	    }
+	}
+
+	.download a {
+		padding: 10px 20px 10px 40px;
+		border: 2px solid $theme-secondary-color;
+		color: $text-color;
+		font-weight: 600;
+		position: relative;
+
+		@include media-query(1199px) {
+	    	padding: 7px 15px 7px 30px;
+	    }
+
+		@include media-query(991px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+	    	padding: 5px 15px 5px 30px;
+	    }
+	}
+
+	.download a i {
+		position: absolute;
+		left: 20px;
+
+		@include media-query(1199px) {
+	    	left: 10px;
+	    }
+	}
+
+	.details {
+		ul {
+			list-style-type: none;
+			padding: 2em 0 3em;
+		}
+
+		ul li {
+			position: relative;
+			padding-left: 75px;
+			font-weight: 600;
+
+			@include media-query(1199px) {
+				padding-left: 45px;
+		    }
+		}
+
+		ul > li + li {
+			margin-top: 45px;
+
+			@include media-query(1199px) {
+				margin-top: 20px;
+		    }
+		} 
+
+		ul li i {
+			background-color: $theme-secondary-color;
+			width: 45px;
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translatingY(-50%);
+
+			@include media-query(1199px) {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 12px;
+		    }
+		}
+
+		p {
+			margin-bottom: 2em;
+		}
+
+		@include media-query(991px) {
+
+			h4 {
+				font-size: 16px;
+				font-size: calc-rem-value(16);
+			}
+		}
+
+	}
+}

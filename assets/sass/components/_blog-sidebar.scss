@@ -1,0 +1,227 @@
+/*** blog-sidebar ***/
+.blog-sidebar {
+
+	@include media-query(991px) {
+		margin-top: 80px;
+	}
+
+	@include media-query(767px) {
+		margin-top: 70px;
+	}
+
+	.widget {
+		margin-bottom: 75px;
+
+		@include media-query(991px) {
+			margin-bottom: 60px;
+		}
+
+		ul {
+			list-style: none;
+		}
+	}
+
+	.widget:last-child {
+		margin-bottom: 0;
+	}
+
+	h3 {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		color: lighten($black, 5%);
+		margin: 0 0 1.25em;
+		text-transform: uppercase;
+
+		@include media-query(767px) {
+			font-size: 17px;
+			font-size: calc-rem-value(17);
+		}
+	}
+
+	.category-widget ul li,
+	.archive-widget ul li {
+		border-bottom: 1px solid $white;
+		> a {
+			padding: 10px 0;
+		}
+	}
+
+	ul li {
+		font-size: 15px;
+		font-size: calc-rem-value(15);
+		font-weight: bold;
+
+		> a {
+			display: block;
+			color: lighten($black, 25%);
+			position: relative;
+		}
+
+		&:first-child a {
+			padding-top: 0;
+		}
+
+		&:last-child a {
+			padding-bottom: 0;
+		}
+
+		&:last-child {
+			border: 0;
+		}
+
+		> a:hover {
+			color: $theme-primary-color;
+		}
+
+		> a .badge {
+			background-color: transparent;
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			color: lighten($black, 25%);
+			position: absolute;
+			right: 5px;
+		}
+
+		> a .badge:before,
+		> a .badge:after {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			position: absolute;
+			top: 3px;
+		}
+
+		> a .badge:before {
+			content: "(";
+			left: 0;
+		}
+
+		> a .badge:after {
+			content: ")";
+			right: 0;
+		} 
+	}
+
+	.search-widget {
+		input {
+			background-color: transparent;
+			padding: 8px 12px;
+			height: auto;
+
+			&:focus {
+				box-shadow: none;
+				border-color: $theme-primary-color;
+			}
+		}
+	}
+
+	.recent-post-widget {
+		@include media-query(767px) {
+			ul {
+				margin-left: -15px;
+			}
+		}
+
+		ul li {
+			border: 0;
+			overflow: hidden;
+			margin-bottom: 30px;
+			position: relative;
+
+			@include media-query(767px) {
+				padding: 0 0 40px 100px; 
+				overflow: visible;
+			}
+		}
+
+		ul li:last-child {
+			margin-bottom: 0;
+		}
+
+		.post-pic {
+			width: 30%;
+			float: left;
+
+			@include media-query(767px) {
+				width: 70px;
+				float: none;
+				position: absolute;
+				left: 15px;
+			}
+		}
+
+		.details {
+			width: 68%;
+			float: right;
+
+			@include media-query(767px) {
+				width: 100%;
+				float: none;
+			}
+
+			> span {
+				font-size: 12px;
+				font-size: calc-rem-value(12);
+				color: lighten($black, 40%);
+				text-transform: uppercase;
+			}
+		}
+
+		.details h4 {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			margin: 0.5em 0;
+			text-transform: capitalize;
+
+			@include media-query(767px) {
+				font-size: 13px;
+				font-size: calc-rem-value(13);
+				padding-top: 10px;
+			}
+		}
+
+		.details h4 a {
+			color: $black;
+		}
+
+		.details h4 a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+	.tag-widget .all-tags {
+		margin-left: -12px;
+
+		a {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			font-weight: bold;
+			color: lighten($black, 50%);
+			border: 0;
+			@include transition-time(0.3s);
+		}
+
+		a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+	.instagram-widget {
+		ul {
+			overflow: hidden;
+			margin-right: -8px;
+		}
+
+		ul li {
+			width: 33.33%;
+			float: left;
+			padding: 0 8px 8px 0;
+		}
+
+		ul li img {
+			max-width: 100%;
+			@include media-query(767px) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+.section-title {
+	
+	margin-bottom: 35px;
+	
+	@include media-query(991px) {
+		margin-bottom: 35px;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		text-transform: uppercase;
+		margin: 0;
+		padding-bottom: 0.5em;
+		position: relative;
+		letter-spacing: -1px;
+		
+		@include media-query(1199px) {
+			font-size: 27px;
+			font-size: calc-rem-value(27);
+		}
+		
+		@include media-query(991px) {
+			font-size: 24px;
+			font-size: calc-rem-value(24);
+		}
+		
+		@include media-query(767px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+		
+		&:before {
+			content: "";
+			background-color: $theme-secondary-color;
+			width: 33px;
+			height: 5px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			@include rounded-border(3px);
+			
+			@include media-query(767px) {
+				height: 3px;
+			}
+		}
+	}
+}
+
+.section-title-white {
+	@extend .section-title;
+
+	h2 {
+		color: $white;
+	}
+}
+
+.section-title-s2 {
+	@extend .section-title;
+	text-align: center;
+
+	h2,
+	p {
+		color: $white;
+	}
+
+	h2:before {
+		left: 50%;
+		@include translatingX(-50%);
+	}
+
+	h2 {
+		margin: 0 0 0.83em;
+	}
+
+	p {
+		margin: 0;
+		
+		@include widther(1200px) {
+			padding: 0 45px;
+		}
+	}
+}
+
+.section-title-s3 {
+	margin-bottom: 30px;
+	
+	h2 {
+		font-size: 30px;
+		font-size: calc-rem-value(30);
+		line-height: 1.33em;
+		margin: 0.13em 0 0;
+		padding-bottom: 0.3em;
+		position: relative;
+		
+		@include media-query(1199px) {
+			font-size: 27px;
+			font-size: calc-rem-value(27);
+		}
+		
+		@include media-query(991px) {
+			font-size: 24px;
+			font-size: calc-rem-value(24);
+		}
+		
+		@include media-query(767px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+		
+		&:before {
+			content: "";
+			background-color: $theme-secondary-color;
+			width: 80px;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	> span {
+		color: #9a9a9a;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+}
+
+.section-title-s4 {
+	@extend .section-title-s3;
+
+	h2 {
+		margin: 0 0 0.83em;
+	}
+}
+
+.section-title-s5 {
+	@extend .section-title-s2;
+	
+	h2 {
+		color: $heading-color;
+	}
+
+	p {
+		color: $text-color;
+	}
+} 
+
+.section-title-s6 {
+	@extend .section-title-s5;
+	
+	h2 {
+		text-transform: none;
+	}
+
+	h2:before {
+		display: none;
+	}
+}
+
+.section-title-s7 {
+	@extend .section-title-s6;
+	
+	h2 {
+		padding-bottom: 0;
+	}
+}

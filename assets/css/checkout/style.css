@@ -1,0 +1,73 @@
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkedBox {
+    color: #65d074;
+}
+
+.skip-loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 9999;
+}
+
+.round-img-style {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.box-img {
+    min-height: 150px;
+    text-align: -webkit-center;
+}
+
+.btn-seleccionar {
+    background: #65d074 !important;
+    border-color: #65d074 !important
+}
+
+.btn-next-checkout {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 1.25rem !important;
+    line-height: 1.5 !important;
+    border-radius: 0.2rem !important;
+    color: #fff !important;
+    background-color: #383838 !important;
+    border-color: #383838 !important;
+}
+
+@media (min-width: 1000px) {
+    .background-shipping {
+        color: #856404;
+        background-color: #fff3cd;
+        border-color: #ffeeba
+    }
+    .background-shipping .alert-link {
+        color: #533f03
+    }
+}
+
+@media (max-width: 1000px) {
+    .padding-mobile {
+        padding-left: 40px!important;
+        padding-right: 20px!important;
+    }
+    .select2 {
+        width: 100%!important;
+    }
+    .pl-0-mobile {
+        padding-left: 0px!important;
+    }
+}

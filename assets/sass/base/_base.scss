@@ -1,0 +1,232 @@
+/*--------------------------------------------------------------
+#0.1    Theme Reset Style
+--------------------------------------------------------------*/
+html {
+    font-size: $base-font-size + px;
+}
+
+body {
+    font-family: $base-font;
+    font-size: 15px;
+    font-size: calc-rem-value(15);
+
+    @include media-query( 767px ) {
+        font-size: 14px;
+        font-size: calc-rem-value(14);
+    }
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+p {
+    color: $text-color;
+    line-height: 1.8em;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: $heading-color;
+    margin: 0 0 0.4em;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+
+a {
+    text-decoration: none;
+    @include transition-time(0.2s);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*--------------------------------------------------------------
+#0.2    Global Elements
+--------------------------------------------------------------*/
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.float-right {
+    float: right;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.fi:before {
+    margin: 0;
+}
+
+.section-padding {
+    padding: 100px 0;
+
+    @include media-query( 1199px ) {
+        padding: 80px 0;
+    }
+
+    @include media-query( 767px ) {
+        padding: 70px 0;
+    }
+}
+
+
+/*** contact form error handling ***/
+.contact-validation-active {
+    .error-handling-messages {
+        width: 100%;
+        margin-top: 15px;
+        clear: both;
+    }
+
+    label.error {
+        color: red !important;
+        font-size: calc-rem-value(14);
+        font-weight: normal;
+        margin: 5px 0 0 0;
+    }
+
+    #loader,
+    #loader-2 {
+        display: none;
+        margin-top: 10px;
+    }
+
+    #success,
+    #success-2,
+    #error,
+    #error-2 {
+        width: 100%;
+        color: $white;
+        padding: 5px 10px;
+        font-size: 16px;
+        text-align: center;
+        display: none;
+
+        @include media-query(767px)  {
+            font-size: 15px;
+        }
+    }
+
+    #success,
+    #success-2 {
+        background-color: lighten(green, 5%);
+        border-left: 5px solid green;
+        margin-bottom: 5px;
+    }
+
+    #error,
+    #error-2 {
+        background-color: lighten(red, 5%);
+        border-left: 5px solid red;
+    }
+
+    #loader {
+        text-align: center;
+        color: #fff;
+        font-size: 8px;
+        font-size: calc-rem-value(8);
+    }
+}
+
+/*** back to top **/
+.back-to-top {
+    background-color: transparentize($theme-secondary-color, 0.1);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+    @include transition-time(0.2s);
+    @include rounded-border(3px);
+
+    @include media-query(991px) {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    &:hover {
+        background-color: $theme-secondary-color;
+    }
+}
+
+.back-to-top i {
+    font-size: 18px;
+    font-size: calc-rem-value(18);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include center-by-translating();
+}
+
+
+
+/** for popup image ***/
+.mfp-wrap {
+    background-color: transparentize($black, 0.1);
+    z-index: 99999;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/*** for fancybox video ***/
+.fancybox-overlay {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999 !important;
+}
+
+.fancybox-wrap {
+  z-index: 99999 !important;
+}
+

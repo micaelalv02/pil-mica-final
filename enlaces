@@ -1,0 +1,37 @@
+Proyecto Institucional v2:
+Fecha máxima de entrega: Viernes 28/10.
+Theme download: https://www58.zippyshare.com/v/sIYrp0sO/file.html
+Theme seleccionado: https://themeim.com/demo/softim/index-two.html
+Usar Áreas, Contenidos, Categorías
+
+NAV: 
+Home
+About (https://themeim.com/demo/softim/about.html)
+Services (https://themeim.com/demo/softim/service.html)
+Portfolio (https://themeim.com/demo/softim/portfolio.html)
+Blog (https://themeim.com/demo/softim/blog-classic.html)
+Contacto (con el botón azul | https://themeim.com/demo/softim/contact.html)
+
+ÁREAS
+INICIO
+EMPRESA
+PORTFOLIOS
+SERVICIOS
+TESTIMONIOS
+BLOG
+CONTACTO
+PIE DE PÁGINA
+
+ÁREAS CON CATEGORIAS
+PORTFOLIOS
+BLOG
+
+CONTENIDOS
+Tiene que quedar EXACTAMENTE IGUAL para esto usar las mismas imágenes y textos
+
+
+EL ADMIN ES AGREGANDO /ADMIN A LA URL DEL PROYECTO
+EXPORTAR DB
+HACE GIT CLONE
+USAR EN LOCAL
+CAMBIAR .ENV EN PROJECT="/pil-final/mica2" POR LA RUTA DE LA CARPETA LOCAL

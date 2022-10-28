@@ -1,0 +1,106 @@
+/*************************************
+    = service sinle sidebar
+**************************************/
+.service-single-sidebar {
+	
+	@include widther(992px) {
+		padding-right: 40px;
+	}
+
+	@include media-query(991px) {
+		margin-top: 80px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	> .widget + .widget {
+		margin-top: 50px;
+	} 
+
+	// services-link-widget
+	.services-link-widget ul > li + li {
+		margin-top: 10px;
+	}
+
+	.services-link-widget ul li a {
+		background-color: #f5f2f2;
+		font-weight: 600;
+		color: #242424;
+		padding: 14px 20px;
+		display: block;
+		text-transform: uppercase;
+
+		@include media-query(1199px) {
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+		}
+
+		@include media-query(767px) {
+			font-size: 12px;
+			font-size: calc-rem-value(12);
+			padding: 10px 15px;
+		}
+	}
+
+	.services-link-widget ul li a:hover,
+	.services-link-widget ul li.current a {
+		background-color: $theme-secondary-color;
+	}
+
+	//download-brocher-widget
+	.download-brocher-widget {
+		a {
+			background-color: $theme-secondary-color;
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			font-weight: 600;
+			color: $white;
+			padding: 17px 20px 17px 50px;
+			position: relative;
+			display: block;
+			text-transform: uppercase;
+
+			@include media-query(1199px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+		    }
+
+		    @include media-query(767px) {
+				font-size: 13px;
+				font-size: calc-rem-value(13);
+				padding: 10px 15px 10px 40px;
+			}
+		}
+
+		a i {
+			background-color: $theme-primary-color;
+			padding: 5px 10px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translatingY(-50%);
+		}
+	}
+
+	.contact-widget {
+		border: 2px solid #e9e9e9;
+		padding: 30px 25px;
+
+		h3 {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+			margin: 0 0 0.8em;
+
+			@include media-query(991px) {
+				font-size: 17px;
+				font-size: calc-rem-value(17);
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}

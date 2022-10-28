@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+	shop with sidebar page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#11.0	shop-main-content
+--------------------------------------------------------------*/
+.shop-with-sidebar {
+	.products-grids {
+		overflow: hidden;
+	}
+
+	.products-grids .grid-wrapper {
+		width: 33.33%;
+		float: left;
+		padding: 0 7.5px;
+	    margin-bottom: 20px;
+
+	    @include media-query(1199px) {
+	    	width: 50%;
+	    }
+
+	    @include media-query(500px) {
+	    	width: 100%;
+	    }
+	}
+
+	.products-grids .grid {
+	    box-shadow: none;
+	    margin: 3px 0;
+	}
+}
