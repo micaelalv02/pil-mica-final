@@ -11,7 +11,7 @@ $portfolioData = $contenidos->list(["images" => true, "filter" => ["contenidos.a
 
 $pagina = isset($_GET['pagina']) ? $f->antihack_mysqli($_GET['pagina']) : 1;
 $limite = 12;
-var_dump($_GET);
+//var_dump($_GET);
 #List de contenidos (al ser único el título, solo trae un resultado)
 
 

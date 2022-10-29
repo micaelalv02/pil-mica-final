@@ -28,9 +28,9 @@ $equipoData = $contenidos->list(["images" => true, "filter" => ["contenidos.area
 var_dump($portfolioData);
 echo"</pre>";*/
 
+//var_dump(URL);
 $template->themeInit();
 ?>
-
 
 
 <!--Inicio-->
